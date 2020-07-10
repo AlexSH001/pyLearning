@@ -26,16 +26,10 @@ class Frame(object):
 			self.active = False
 
 	def is_strike(self):
-		if len(self.roll_scores) == 1 and self.roll_scores[0] == 10:
-			return True
-		else:
-			return False
+		return len(self.roll_scores) == 1 and self.roll_scores[0] == 10
 
 	def is_spare(self):
-		if len(self.roll_scores) == 2 and sum(self.roll_scores) == 10:
-			return True
-		else:
-			return False
+		return len(self.roll_scores) == 2 and sum(self.roll_scores) == 10
 
 
 class Game(object):
